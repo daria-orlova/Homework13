@@ -6,16 +6,12 @@ public class Main {
         Book capitainsDaughter = new Book("Капитанская дочка", 1723, pushkin);
         Book warAndPeace = new Book("Война и мир", 1823, tolstoy);
 
-        System.out.println(
-                capitainsDaughter.getTitle() + " " + capitainsDaughter.getPublishingYear() + " " +
-                        capitainsDaughter.getAuthor().getName() + " " +
-                        capitainsDaughter.getAuthor().getSurname()
-        );
-
-        System.out.println(
-                warAndPeace.getTitle() + " " + warAndPeace.getPublishingYear() + " " +
-                        warAndPeace.getAuthor().getName() + " " +
-                        warAndPeace.getAuthor().getSurname()
-        );
+        printInfo(capitainsDaughter);
+        printInfo(warAndPeace);
+        System.out.println(pushkin.equals(tolstoy));
+    }
+    public static void printInfo (Book book) {
+        System.out.println(book.toString());
+        System.out.println(book.hashCode());
     }
 }
